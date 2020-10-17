@@ -23,7 +23,9 @@ const Meetup = ({ meetup }) => (
       </div>
 
       <h1 className="text-2xl font-bold mt-2">{meetup.title}</h1>
-      <h2 className="text-xl font-semibold text-gray-800">by Álex</h2>
+      <h2 className="text-xl font-semibold text-gray-800">
+        by {meetup.speakers.map((s) => s.name).join(" & ")}
+      </h2>
 
       <ReactMarkdown
         className="text-gray-900 mb-6"
