@@ -19,7 +19,7 @@ const Footer = () => (
   <div className="w-full text-center bg-gray-100 p-4">
     <div className="text-gray-500 text-sm">
       Made with
-      <HearthIcon className="inline fill-current text-red-600 h-5 w-5 ml-1 mr-1 animate-pulse" />
+      <HearthIcon className="inline fill-current text-main-500 h-5 w-5 ml-1 mr-1 animate-pulse" />
       by
       <a href="https://twitter.com/agonzalezro">@agonzalezro</a>
     </div>
