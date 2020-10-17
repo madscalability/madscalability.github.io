@@ -1,0 +1,383 @@
+{
+    "meetups": [
+      {
+        "title": "Incident analysis",
+        "speakers": [
+          {
+            "name": "Alejandro Fernández",
+            "role": "Freelance",
+            "twitter": "pinchito"
+          }
+        ],
+        "abstract": "Our website is down! Customers are complaining! The sky is falling on our heads! What can we do to improve the situation? If we are managing a team, should we start cutting off heads? Otherwise, should we start looking for a new job?\nDo not despair; we are not alone, we have many decades of incident analysis behind us. In this talk we will explain several techniques that may help us face the situation: root-cause analysis, the five whys and blameless postmortems. We will also review some leadership attitudes and how they affect future incident response. Finally, we will briefly analyze a couple of real catastrophes from recent history that will give us a fresh perspective on incident analysis.",
+        "video": "https://www.youtube.com/watch?v=g274h7w0TTk",
+        "language": "EN",
+        "date": "23/09/2020"
+      },
+      {
+        "title": "Microcontainers: Reduciendo el tamaño de tus contenedores",
+        "speakers": [
+          {
+            "name": "Ramón Gordillo",
+            "role": "Architect at RedHat",
+            "twitter": "gordillo_ramon"
+          }
+        ],
+        "abstract": "Uno de los retos de los desarrollos en contenedores representa reducir el consumo de las infraestructuras en los datacenters, y conseguir mayor densidad.\nUnido a este tema, la reducción del tamaño también redunda en una menor superficie de ataque y mejor seguridad en las aplicaciones. En esta charla veremos estos temas y el trabajo que diferentes equipos están llevando con este objetivo.",
+        "video": "https://www.youtube.com/watch?v=ymtG4njQq6s",
+        "language": "ES",
+        "date": "05/02/2020"
+      },
+      {
+        "title": "Secrets as Code",
+        "speakers": [
+          {
+            "name": "Fernando Llaca",
+            "role": "Platform Engineer at Adhara",
+            "twitter": "NandoLlaca"
+          },
+          {
+            "name": "Carlos Figueras",
+            "role": "Platform Engineer at Adhara",
+            "twitter": "figuerascarlos"
+          }
+        ],
+        "abstract": "At Adhara we need to build very different environments every week: for sub-products internal development, for customers pilots, for phoenix environments for testing… dozens of them.\nEverything was nicely automated with Terraform and leveraging Kubernetes to handle the complexity of the deployments. But… the database credentials. The Kubernetes secrets were created manually, and then its content backed in somewhere like Keybase. Not pretty. This is the story on how Adhara’s Platform team moved from that situation to the current fully automated creation of databases and their passwords, following GitOps practices and using tools like Atlantis, Flux and Terraform. Now we create new deployments every day without seeing ourselves the database passwords. We don’t even have access to them!",
+        "video": "https://www.youtube.com/watch?v=GNYq1lYLfnw",
+        "language": "ES",
+        "date": "05/02/2020"
+      },
+      {
+        "title": "Non-trusted shared Kubernetes at K8Spin",
+        "speakers": [
+          {
+            "name": "Ángel Barrera",
+            "role": "DevOps? SRE? Architect? at SIGHUP",
+            "twitter": "AngelBarrera92"
+          },
+          {
+            "name": "Pau Rosello",
+            "role": "_ at Giant Swarm",
+            "twitter": "paurosello"
+          }
+        ],
+        "abstract": "K8Spin offers in SaaS format Kubernetes Namespaces. What does this mean? We open to everyone the possibility of having a space within a common Kubernetes cluster. Is kubernetes ready for this? Are the typical tools of the Kubernetes ecosystem prepared?\nWe will see the current possibilities and the POCs that we are carrying out in K8Spin.",
+        "video": "https://www.youtube.com/watch?v=8R1Ho8WWC4U",
+        "language": "ES",
+        "date": "27/11/2019"
+      },
+      {
+        "title": "Postmortems at Flywire",
+        "speakers": [
+          {
+            "name": "Omar López",
+            "role": "SRE",
+            "twitter": "olopez"
+          },
+          {
+            "name": "Andoni Alonso",
+            "role": "SRE"
+          }
+        ],
+        "abstract": "At Flywire, we have been using blameless postmortem technique for more than 3 years. During that time we have modified, evolved and adapted the process to our company needs. Today postmortems at Flywire are a tool that help us to improve the understanding of our systems, train the oncall team, be transparent with the stakeholders about what happened during an incident, improve our procedures during oncall/fire situations and dig into the root causes of the incidents taking actions over them to fix them and avoid future similar incidents. We want to share which are the principles of blameless postmortem, how we apply them at Flywire and how to start to apply them into your company.",
+        "video": "https://www.youtube.com/watch?v=RknB6aDXJbA",
+        "language": "ES",
+        "date": "27/11/2019"
+      },
+      {
+        "title": "Operation Exodus",
+        "speakers": [
+          {
+            "name": "Sebastian Barrios",
+            "role": "Cabify's CTO"
+          }
+        ],
+        "abstract": "Cabify wasn't happy with their infrastructure as they were struggling to meet their SLA guarantees. After a rough week with daily SLA drops and direct impact to customers, they decided to move forward with the migration of the entire underlying services infrastructure. The migration took Cabify barely 3 weeks, and they managed to do it without downtime or any customer impact. Coordinating dozens of teams and individuals, dealing and paying lots of technical debt in the process. This is the story of how they did it.",
+        "video": "https://www.youtube.com/watch?v=8k_cIxBsV1M",
+        "language": "EN",
+        "date": "23/10/2019"
+      },
+      {
+        "title": "Talk: Events, Services and 'hives'",
+        "speakers": [
+          {
+            "name": "Imanol",
+            "role": "Tech Lead",
+            "twitter": "imanolcg"
+          },
+          {
+            "name": "Pedro Díaz",
+            "role": "SRE Lead",
+            "twitter": "multiservicio86"
+          }
+        ],
+        "abstract": "Imanol González, Tech Lead, and Pedro Díaz SRE Lead, will share with us what they have developed at MercadonaTech but is not visible to their users: logistics. Every piece of software that is running in their warehouses (aka _hives_) was developed internally. They decided not to go with multitenant and certain critical services are deployed directly in the hive, also, they didn’t discard running a local instance of Kubernetes within their hives theirselves. If you want to know more about their architecture, how do they manage deployments in more than one warehouse, the why behind some decisions and every step they took to reach this point, we encourage you to come!\n\nPS: they promise to show some numbers about what all this machinery is doing while you sleep!",
+        "video": "https://www.youtube.com/watch?v=qAFktSf6m_0",
+        "language": "ES",
+        "date": "23/10/2019"
+      },
+      {
+        "title": "Seedtag's microservices and infrastructure",
+        "speakers": [
+          {
+            "name": "Paul",
+            "role": "Seedtag's CTO",
+            "twitter": "paulgoldbaum"
+          }
+        ],
+        "abstract": "In this talk we'll dive into the infrastructure that seedtag has built for it's online advertising product. Developed as a microservices-based architecture on top of Kubernetes, we handle billions of pageviews every month in a globally distributed platform that has to respond with tight milliseconds requirements. We'll go into the mix of technologies that we are using (Kafka, Mongo, Spark, Druid, ...) and some of the challenges that we have faced with them.",
+        "video": "https://www.youtube.com/watch?v=Ib22wxVZiUY",
+        "language": "EN",
+        "date": "18/08/2019"
+      },
+      {
+        "title": "Anatomy of an object storage migration plan",
+        "date": "18/0/2019",
+        "speakers": [
+          {
+            "name": "Javier Provecho",
+            "twitter": "javierprovecho",
+            "role": "Platform Engineer at Telefónica and Google Developer Expert"
+          }
+        ],
+        "abstract": "Managed services in the cloud allow us to quickly develop our projects while virtually taking away the challenges of our product’s growth. An example is object storage, especially when used for big data purposes because the only usage is billed, not capacity.\n\nHowever these services are also built by humans, which their scalability is based on tradeoffs, some of them will hit you unexpectedly.\n\nIn this talk I’ll talk about the design decisions, the obstacles encountered and lessons learned from planning the migration of 39 million objects inside a maintenance window.",
+        "video": "https://www.youtube.com/watch?v=SfvzDHxoW1s",
+        "language": "ES"
+      },
+      {
+        "title": "Profiling de CPU en Python",
+        "date": "18/06/2019",
+        "speakers": [
+          {
+            "name": "Alejandro Brito",
+            "twitter": "ae_bm",
+            "role": "CTO (Chief Trolling Officer) || CPO (Chief Pizza Officer) at Alea Soluciones_"
+          }
+        ],
+        "abstract": "Teníamos un servidor con una alta carga de CPU, y cuando nos pusimos a ver era un proceso python. Además la alta carga era en modo USER así que no podíamos culpar al SO. El proceso se ejecutaba periódicamente y tardaba minutos en terminar. Así que la gracia era averiguar qué estaba haciendo.",
+        "video": "https://www.youtube.com/watch?v=L5jsOq1ktcc",
+        "language": "ES"
+      },
+      {
+        "title": "Arquitecturas orientada a eventos. Conceptos y aplicación práctica",
+        "date": "20/03/2019",
+        "speakers": [
+          {
+            "name": "Daniel Brandi",
+            "role": "Director de desarrollo en Orange Bank"
+          }
+        ],
+        "video": "https://www.youtube.com/watch?v=pqTpFCIjVFs",
+        "language": "ES"
+      },
+      {
+        "title": "Resilience patterns (server edition)",
+        "date": "20/03/2019",
+        "speakers": [
+          {
+            "name": "Xabier Larrakoetxea",
+            "role": "SRE at Spotahome",
+            "twitter": "sLoK69"
+          }
+        ],
+        "abstract": "We can't control how the clients will use our services, most of the time our servers are not protected against failures and don't have the ability to recover or continue giving service.\nIn this session, Xabier Larrakoetxea will explain the problems we face on the server side, why we need to protect our servers, and how we can design and implement more resilient and robust systems, by applying some of the most used resilience patterns in big companies like Netflix or Facebook. The session will focus only on the server part leaving the client side resilience for an own session.",
+        "video": "https://www.youtube.com/watch?v=M_B0CnL88ZE",
+        "language": "ES"
+      },
+      {
+        "title": "Kubernetes journey at Tuenti",
+        "date": "09/01/2019",
+        "speakers": [
+          {
+            "name": "Fernando Crespo",
+            "twitter": "FerCrespoGrav",
+            "role": "SRE at Tuenti"
+          }
+        ],
+        "abstract": "_antes to esto era campo_\nWe have been using Kubernetes since 1.0, that presented a lot of challenges that we manage to figure out from automated provisioning to advanced scheduling settings in a large and complex hybrid infrastructure.",
+        "video": "https://www.youtube.com/watch?v=a0NH3MvPhbI",
+        "language": "ES"
+      },
+      {
+        "title": "Azure Cosmos DB: how a planetary scale database was designed and implemented",
+        "date": "09/01/2019",
+        "speakers": [
+          {
+            "name": "Diego Parrilla",
+            "twitter": "nubeblog",
+            "role": "Dev Tech Advocacy Lead at Microsoft"
+          }
+        ],
+        "abstract": "With the arrival of large cloud computing providers (hyperscalers) the first wave of managed database services arrived. These services mimicked what we had seen before in our data centers, our servers, and even our development devices running managed SQLServer, MySQL, Posgresql, MariaDB, Redis... But now a new generation of database services has arrived and they only make sense in these mega-suppliers. Horizontal autoscaling, replication in dozens of availability zones, minimal latencies, CAP theorem challenging... and on top of that multi-schema databases. This talk explains how Cosmos DB was born due to Microsoft's massive scaling needs with XBOX, the design decisions made and their impact, how it compares and how other competitors do it. Finally, an example of how my globally deployed side-project Apility.io (with no link to Microsoft) could benefit of Cosmos DB.",
+        "video": "https://www.youtube.com/watch?v=LYihlJ3nkjs",
+        "language": "ES"
+      },
+      {
+        "title": "Automating platform with Kubernetes in Spotahome",
+        "date": "23/032018",
+        "speakers": [
+          {
+            "name": "Sergio Ballesteros",
+            "role": "Head of Platform at Spotahome"
+          }
+        ],
+        "abstract": "We'll talk about the challenges we are facing in Spotahome in order to maintain and deliver a toil-less platform based on Kubernetes. Also, We'll explain how to extend Kubernetes with operators, CRDs, and APIs to manage clusters and build bridges between engineers and the platform, reducing overhead in the operative tasks while improving security and reliability in a continuous delivery environment.",
+        "video": "https://www.youtube.com/watch?v=q_9ltuwCgqM",
+        "language": "ES"
+      },
+      {
+        "title": "Service Mesh for your Service Mess",
+        "date": "23/032018",
+        "speakers": [
+          {
+            "name": "Fernando Llaca",
+            "twitter": "NandoLlaca"
+          }
+        ],
+        "abstract": "Building microservices is easy, operating a microservice architecture is hard. Many companies are successfully using tools like Kubernetes for deploys, but they still face runtime challenges when they have to perform routing, monitoring or security. Having a mess of tens, hundreds or even thousands of services communicating in production is a job only for the very tough ones... Service Mesh is an architectural pattern that comes to solve these problems with a simple, clean approach.",
+        "video": "https://www.youtube.com/watch?v=mJAfVCt0yBI",
+        "language": "ES"
+      },
+      {
+        "title": "CoreOS Container Linux baremetal provisioning with Terraform, Ignition and Matchbox",
+        "date": "04/04/1984",
+        "speakers": [
+          {
+            "name": "Rafa Porres",
+            "twitter": "walter_burns"
+          }
+        ],
+        "abstract": "Building your infrastructure in baremetal servers is a very interesting and cost-effective option, especially in these container period where we can leverage the power of orchestrators like kubernetes. Baremetal is of course less flexible and it comes with tasks long forgotten in our cloud-based days: booting management and configuration. CoreOS is a good and popular choice as a base OS for a container-based system. It is also interesting due to the tools it has to make booting and OS configuration a much simpler task. In this talk I'm going to describe two of them: Matchbox and Ignition and how we can integrate them in our Terraform infrastructure description using specific providers for it. This is part of a general approach towards immutable infrastructure provisioning.",
+        "video": "https://www.youtube.com/watch?v=WFyFUWCvmv4",
+        "language": "EN"
+      },
+      {
+        "title": "Mis primeros pasos subiendo escaleras",
+        "date": "04/04/1984",
+        "speakers": [
+          {
+            "name": "Alejandro Brito Monedero",
+            "twitter": "ae_bm"
+          }
+        ],
+        "abstract": "Guía para padres de que hacer en los momentos cruciales cuando la aplicación web de un cliente es más lento que cargar una web con flash desde Africa con un fax modem.",
+        "video": "https://www.youtube.com/watch?v=-EVD8hl-YZM",
+        "language": "ES"
+      },
+      {
+        "title": "High-impact refactors keeping the lights on",
+        "date": "27/09/2017",
+        "speakers": [
+          {
+            "name": "Diego",
+            "twitter": "kartones",
+            "role": "dev at Ticketea"
+          }
+        ],
+        "abstract": "Cómo llegar a un proyecto que lleva años en marcha y acometer tanto reescrituras de componentes críticos como nuevas piezas intentando modificar lo menos posible los flujos de negocio actuales, aplicando patrones de diseño como parallel change, event bus, o event sourcing. Y de paso mejorando la automatización y los flujos de desarrollo y testing.",
+        "video": "https://www.youtube.com/watch?v=buupNqhn4HQ",
+        "language": "ES"
+      },
+      {
+        "title": "Cómo escalar MySQL",
+        "date": "27/09/2017",
+        "speakers": [
+          {
+            "name": "Jaime Medrano",
+            "role": "lead engineer at Tuenti"
+          }
+        ],
+        "abstract": "Cómo utilizar MySQL con volúmenes grandes de datos sin morir en el intento. Cuáles son los distintos tipos de replicación y sus ventajas e inconvenientes. Qué problemas te vas a encontrar y cómo solucionarlos.",
+        "video": "https://www.youtube.com/watch?v=kEknDX807xk",
+        "language": "ES"
+      },
+      {
+        "title": "Autoescalado con Ladder",
+        "date": "21/05/2017",
+        "speakers": [
+          {
+            "name": "Xabier Larrakoetxea",
+            "twitter": "sLoK69"
+          }
+        ],
+        "abstract": "¿Alguna vez has pensado en autoescalar tu plataforma pero has terminado pensando que es un proceso excesivamente complejo y que requiere mucho trabajo? o ¿Quizás no sabes por donde empezar? Si te has hecho estas preguntas, esto te interesa.",
+        "video": "https://www.youtube.com/watch?v=aoei1CkYWrI",
+        "language": "ES"
+      },
+      {
+        "title": "Por qué API REST está muerto y deberiamos usar APIs basadas en GraphQL",
+        "date": "21/05/2017",
+        "speakers": [
+          {
+            "name": "Txema (aka José María :)",
+            "twitter": "durbon"
+          }
+        ],
+        "abstract": "Las APIs más populares que utilizamos a día de hoy son RESTful APIs o un pseudo estándar ad hoc HTTP. Pero la necesidad de avanzar rápido en productos cada vez más complejos más allá de un simple CRUD ha empujado un cambio en la forma en que interactuamos con las APIs. Aquí es dónde surge GraphQL, un fuerte candidato predestinado a sustituir a REST en muchas aplicaciones, sobre todo en el ecosistema móvil de apps.\n¿Qué hay de malo en REST? Nada en su concepción inicial y en el contexto dónde surgió, pero desde que fuera definido la forma de interactuar con las APIs ha cambiado.\n\nVamos a repasar las razones por las que deberíamos repensar las tradicionales APIs basadas en RESTful en favor de GraphQL.",
+        "video": "https://www.youtube.com/watch?v=vNADR7Ud1dQ",
+        "language": "ES"
+      },
+      {
+        "title": "CI/CD with Kubernetes, Helm and Wercker",
+        "date": "30/11/2016",
+        "speakers": [
+          {
+            "name": "Javier Cuevas",
+            "twitter": "javier_dev"
+          }
+        ],
+        "abstract": "He will do a brief introduction to Kubernetes and Gudog'sdockerized architecture and then move into how to achieve continuous integration and continuous delivery to multiple environments, using Wercker (a docker based CI platform) and Helm (a Kubernetes package manager).",
+        "video": "https://www.youtube.com/watch?v=kmH5DWtdGf4",
+        "language": "EN"
+      },
+      {
+        "title": "Lighthing: Zookeper",
+        "date": "30/11/2016",
+        "speakers": [
+          {
+            "name": "Germán Blanco"
+          }
+        ],
+        "video": "https://www.youtube.com/watch?v=s7ZxywFB9iI",
+        "language": "ES"
+      },
+      {
+        "title": "Lighthing: Huge data ingestion with AWS",
+        "date": "30/11/2016",
+        "speakers": [
+          {
+            "name": "Juan Arias",
+            "twitter": "ariasFreire"
+          }
+        ],
+        "video": "https://www.youtube.com/watch?v=rNzlH9Q5CX8&t=3s",
+        "language": "ES"
+      },
+      {
+        "title": "La muerte tenía un precio",
+        "date": "21/09/2016",
+        "speakers": [
+          {
+            "name": "José Moreno",
+            "role": "Lead engineer @ zooplus"
+          }
+        ],
+        "abstract": "De como nos las tuvimos (y tenemos) que ingeniar para mantener el negocio 100% operativo mientras partimos el monolito, y de todos los costes que nos está generando.",
+        "video": "https://www.youtube.com/watch?v=Drk8JVRZZeo",
+        "language": "ES"
+      },
+      {
+        "title": "Scalability and microservice dogfooding in Weave Cloud",
+        "date": "21/09/2016",
+        "speakers": [
+          {
+            "name": "Alfonso Acosta",
+            "role": "Software engineer at Weave.works"
+          }
+        ],
+        "abstract": "cloud.weave.works is a fast and simple way to visualize, manage and monitor containers and microservices. In this talk we will go through its architecture and performance challenges, including a high level microservice breakdown and some obscure details in our datastructures and Golang's runtime.",
+        "video": "https://www.youtube.com/watch?v=lI_Aomt4RAM",
+        "language": "EN"
+      }
+    ]
+  }

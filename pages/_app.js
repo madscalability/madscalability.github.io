@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import React from "react";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import Layout from "../components/layout";
 
-export default MyApp
+import "../css/tailwind.css";
+
+const MyApp = ({ Component, pageProps }) => (
+  <Layout>
+    <Component {...pageProps} />
+  </Layout>
+);
+
+export default MyApp;

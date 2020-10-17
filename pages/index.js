@@ -1,65 +1,72 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from "react";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import Link from "next/link";
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+import humanizedLanguage from "../utils/language";
+import videoID from "../utils/video";
+import data from "../public/meetups.json";
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+const slug = require("slug");
+const ReactMarkdown = require("react-markdown");
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+const thumbnail = (videoURL) => {
+  const id = videoID(videoURL);
+  if (id) return `https://i.ytimg.com/vi_webp/${id}/maxresdefault.webp`;
+};
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+const Meetup = (meetup) => (
+  <Link href={slug(meetup.title)}>
+    <a>
+      <div className="w-full rounded overflow-hidden shadow-lg bg-white">
+        <img
+          className="w-full"
+          src={thumbnail(meetup.video)}
+          alt="Sunset in the mountains"
+        />
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl">{meetup.title}</div>
+          <div className="font-semibold text-gray-800 mb-4">
+            by {meetup.speakers.map((s) => s.name).join(" & ")}
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <ReactMarkdown
+            className="text-gray-700 mb-6"
+            disallowedTypes={["link", "linkReference"]}
+            unwrapDisallowed={true}
+            source={meetup.abstract}
+          />
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className="pb-2">
+            <span className="inline-block bg-main-500 text-white rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">
+              {meetup.date}
+            </span>
+            <span className="inline-block bg-main-500 text-white rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">
+              {humanizedLanguage(meetup.language)}
+            </span>
+          </div>
         </div>
-      </main>
+      </div>
+    </a>
+  </Link>
+);
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+const Meetups = (meetups) =>
+  meetups.map((meetup, index) => (
+    <div className="w-full md:w-2/6 md:m-6" key={index}>
+      {Meetup(meetup)}
     </div>
-  )
-}
+  ));
+
+const Home = ({ meetups }) => (
+  <div className="flex justify-center content-center flex-wrap bg-gray-100">
+    {Meetups(meetups)}
+  </div>
+);
+
+export const getStaticProps = async () => ({
+  props: {
+    meetups: data.meetups,
+  },
+});
+
+export default Home;
