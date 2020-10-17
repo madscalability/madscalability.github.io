@@ -1,8 +1,9 @@
 import React from "react";
 
-import humanizedLanguage from "../utils/language";
-import videoID from "../utils/video";
 import data from "../public/meetups.json";
+import humanizedLanguage from "../utils/language";
+import Speakers from "../components/speakers";
+import videoID from "../utils/video";
 
 const slug = require("slug");
 const ReactMarkdown = require("react-markdown");
@@ -24,7 +25,7 @@ const Meetup = ({ meetup }) => (
 
       <h1 className="text-2xl font-bold mt-2">{meetup.title}</h1>
       <h2 className="text-xl font-semibold text-gray-800">
-        by {meetup.speakers.map((s) => s.name).join(" & ")}
+        <Speakers meetup={meetup} />
       </h2>
 
       <ReactMarkdown
