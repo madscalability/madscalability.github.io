@@ -21,7 +21,7 @@ const Footer = () => (
       Made with
       <HearthIcon className="inline fill-current text-main-500 h-5 w-5 ml-1 mr-1 animate-pulse" />
       by
-      <a href="https://twitter.com/agonzalezro">@agonzalezro</a>
+      <a className="ml-1" href="https://twitter.com/agonzalezro">@agonzalezro</a>
     </div>
   </div>
 );
